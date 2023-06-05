@@ -1,0 +1,74 @@
+body {
+    background: #0f0f0f;
+    margin-top: 100px;
+}
+
+.container {
+    perspective: 1000px;
+    perspective-origin: 100% 100%;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.cube {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 6s linear infinite;
+}
+
+.cube>div {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    opacity: 0.9;
+    background: linear-gradient(to right, #05295f, #00bf72);
+}
+
+.s1 {
+    transform: translateZ(100px);
+}
+
+.s2 {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.s3 {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.s4 {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.s5 {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.s6 {
+    transform: rotateX(-90deg) translateZ(100px) rotate(180deg);
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+h1{
+    color: cyan;
+    font-size: 60px;
+    font-family: Verdana;
+    font-weight: lighter;
+    text-align: center;
+    text-shadow: 5px 2px 5px rgb(0, 182, 182);
+}
+p{
+    color: yellow;
+    font-size: 40px;
+    font-family: Verdana;
+    font-weight: lighter;
+    text-align: center;
+    text-shadow: 5px 2px 5px rgb(173, 173, 0);
+}
